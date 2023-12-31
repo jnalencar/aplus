@@ -1,0 +1,30 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;   
+}
+
+body{
+    color: #fff;
+    background-color: #252525;
+    background-image:
+        radial-gradient(at 50% 0%, rgb(37, 37, 37) 30vh, transparent 70%),
+        radial-gradient(at 50% 0%, rgb(202, 71, 71) 0px, transparent 80%);
+    min-height: 100vh;
+}
+
+.menu-list{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 10vh;
+    height: 7vh;
+    background-color: #202020;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    max-width: 20vw;
+    list-style: none;
+}

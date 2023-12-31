@@ -8,6 +8,9 @@ const cors = require('cors');
 
 app.use(cors());
 
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, '../../frontend/public')));
+
 //rotas anteriores
 app.use('/database/movies', express.static(path.join(__dirname, 'database/movies')));
 app.use('/database/series/t1', express.static(path.join(__dirname, 'database/series/t1')));
@@ -18,10 +21,6 @@ app.use('/database/series/t5', express.static(path.join(__dirname, 'database/ser
 //fim rotas anteriores
 
 app.use('/', routes); // Usa as rotas importadas
-
-app.get('/', (req, res) => {
-  res.send('Servidor funcionando corretamente!');
-});
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
